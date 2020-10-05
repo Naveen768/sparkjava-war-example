@@ -12,9 +12,9 @@ pipeline{
             }
         }
         stage('code build and publish') {
-            steps {
-               		sh 'mvn clean package'
-                    rtUpload (
+            steps{
+                sh 'mvn clean package'
+                rtUpload(
                     serverId: 'artifactory',
                     spec: '''{
                         "files": [
