@@ -29,5 +29,18 @@ pipeline{
                 )
             }
         }
+        stage('deployment') {
+            steps {
+                sh'''
+                id
+                pwd
+                cd /home/ubuntu/
+                ls -lrt
+                curl -u<USERNAME>:<PASSWORD> -T <PATH_TO_FILE> "http://3.137.223.157:8081/artifactory/project/<TARGET_FILE_PATH>"
+                cp sparkjava-hello-world-1.0.war /opt/tomcat/webapps/
+                '''
+            }
+        }    
+
     }
 }
