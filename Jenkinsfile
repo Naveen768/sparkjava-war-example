@@ -36,7 +36,7 @@ pipeline{
                 pwd
                 cd /home/ubuntu/
                 ls -lrt
-                curl -u<USERNAME>:<PASSWORD> -O "http://3.137.223.157:8081/artifactory/project/<TARGET_FILE_PATH>"
+                curl -uadmin:APRhGXps7xAS2ZSuQrPpBJA1w5 -O "http://3.137.223.157:8082/artifactory/project/sparkjava-hello-world-1.0.war"
                 cp sparkjava-hello-world-1.0.war /opt/tomcat/webapps/
                 '''
             }
