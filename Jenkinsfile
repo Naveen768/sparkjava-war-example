@@ -11,9 +11,21 @@ pipeline{
                 '''
             }
         }
-        stage("code build"){
-            steps{
-                sh "mvn clean package"
+        stage('code build and publish') {
+            steps {
+               		sh 'mvn clean package'
+                                           rtUpload (
+    serverId: 'artifactory',
+    spec: '''{
+          "files": [
+            {
+              "pattern": "**/sparkjava-hello-world-1.0.war",
+              "target": "reddy/"
+            }
+         ]
+    }''',
+    buildName: 'reddy',
+    buildNumber: '1'
             }
         }
     }
