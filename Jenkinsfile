@@ -25,8 +25,8 @@ pipeline{
                         ]
                     }''',
                 )}
-                    buildName:'project',
-                    buildNumber:'1'
+                    buildName:"project",
+                    buildNumber:"1"
             }
         }
     }
