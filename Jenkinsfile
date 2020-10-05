@@ -25,8 +25,8 @@ pipeline{
                         ]
                     }''',
                 )
-                buildName:'red',
-                buildNumber:'1'
+                    buildName:'reddy',
+                    buildNumber:'1'
             }
         }
     }
