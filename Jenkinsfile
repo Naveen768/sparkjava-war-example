@@ -20,7 +20,7 @@ pipeline{
                         "files":[
                             {
                                 "pattern": "**/sparkjava-hello-world-1.0.war",
-                                "target": "reddy/"
+                                "target": "project/"
                             }
                         ]
                     }''',
