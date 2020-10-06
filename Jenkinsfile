@@ -5,9 +5,9 @@ pipeline{
             steps{
                 sh '''
                 mvn sonar:sonar \
-  -Dsonar.projectKey=red \
-  -Dsonar.host.url=http://3.15.188.123:9000 \
-  -Dsonar.login=ab71e348fe22672160ba4532e4228e32fc0d71a5
+  -Dsonar.projectKey=project \
+  -Dsonar.host.url=http://3.17.160.211:9000 \
+  -Dsonar.login=16c5880572ce353aeadaab3a4eff504e97306909
                 '''
             }
         }
@@ -36,7 +36,7 @@ pipeline{
                 pwd
                 cd /home/ubuntu/
                 ls -lrt
-                curl -uadmin:APRhGXps7xAS2ZSuQrPpBJA1w5 -O "http://3.137.223.157:8081/artifactory/project/sparkjava-hello-world-1.0.war"
+                curl -uadmin:APAUKBb5JeroF2zDsNs9a83m5aF -O "http://3.137.192.125:8081/artifactory/project/sparkjava-hello-world-1.0.war"
                 cp sparkjava-hello-world-1.0.war /opt/tomcat/webapps/
                 '''
             }
